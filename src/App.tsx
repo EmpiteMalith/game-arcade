@@ -4,7 +4,7 @@ import NavBar from "./components/NavBar";
 
 function App() {
   return (
-    <div>
+    <div className="dark:bg-darkBlack h-screen">
       <NavBar/>
     </div>
   );

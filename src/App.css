@@ -2,10 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
 }
 
 html{
@@ -13,5 +16,17 @@ html{
 }
 
 body{
-  @apply bg-darkBlack;
+  /* @apply bg-darkBlack; */
+}
+
+.search-box:focus::placeholder {
+  @apply text-gray-400;
+}
+
+.search-box:focus  {
+  @apply bg-white;
+}
+
+.search-box:focus .search-icon {
+  @apply hidden;
 }
