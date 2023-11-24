@@ -5,15 +5,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
 
 *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  @apply m-0 p-0 box-border;
   font-family: 'Rubik', sans-serif;
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+  @apply relative min-h-full
+}
+
+body{
+ @apply dark:bg-darkBlack h-full w-full;
 }
 
 /*------------------------------------*\
