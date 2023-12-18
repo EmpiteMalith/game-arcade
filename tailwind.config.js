@@ -9,7 +9,9 @@ module.exports = {
       colors: {
         darkBlack: "#151515",
         darkGray: "#3b3b3b",
-        lightGray: "#BFBFBF"
+        lightGray: "#BFBFBF",
+        nero:"#202020",
+        greyBlueberry:"#718096",
       },
       flexGrow: {
         2: '2'

@@ -7,8 +7,8 @@ function App() {
     <div className="dark:bg-darkBlack flex flex-col">
       <NavBar />
       <div className="w-full flex gap-3 h-full p-5">
-        <div className="flex-1 bg-gray-300 h-full"></div>
-        <div className="flex-4 bg-gray-500 h-full">
+        <div className="flex-1 h-full"></div>
+        <div className="flex-4 h-full">
           <GameGrid />
         </div>
       </div>
