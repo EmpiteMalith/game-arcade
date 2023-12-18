@@ -1,23 +1,21 @@
-
 import useGet from "../hooks/useGet";
 import { GAMES } from "../types/game.types";
+import GameCard from "./GameCard";
+import GameCardSkelton from "./GameCardSkelton";
+import { FiPlus } from "react-icons/fi";
 
 const GameGrid = () => {
-  const { data ,error, isLoading} = useGet<GAMES.IGame>("/games");
-  console.log("data", data);
+  const { data, isLoading } = useGet<GAMES.IGame>("/games");
 
-  isLoading && <h1 className="text-white">Loading....</h1>
-
-  return <div className="grid grid-cols-4 gap-2">
-    {
-      data.map((game)=>(
-        <div className="flex flex-col" key={game.id}>
-           <img className="h-80 w-80 rounded-lg object-cover" src={game.background_image}/>
-           <h3>{game.name}</h3>
-        </div>
-      ))
-    }
-  </div>;
+  return (
+    <div className="grid xl:grid-cols-4 lg:grid-cols-3 gap-6">
+      {isLoading &&
+        [...Array(8)].map((index) => <GameCardSkelton key={index} />)}
+      {data.map((game) => (
+        <GameCard key={game.id} data={game} />
+      ))}
+    </div>
+  );
 };
 
 export default GameGrid;
